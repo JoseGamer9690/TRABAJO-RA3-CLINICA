@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de administración — Huellas del Bravo</title>
+  <link rel="icon" href="/img/logo.svg">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script type="module" src="/js/admin.js"></script>
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <a class="marca" href="/"><img src="/img/logo.svg" alt="">Huellas del Bravo</a>
+      <nav id="nav"></nav>
+    </div>
+  </header>
+  <main class="contenedor">
+    <section class="encabezado"><h1>Panel de administración</h1><p>Usuarios, roles, sesiones activas y bitácora de seguridad.</p></section>
+    <div class="grid g4" id="kpis"></div>
+    <div class="tabs" role="tablist">
+      <button class="activo" data-tab="usuarios">Usuarios</button>
+      <button data-tab="sesiones">Sesiones activas</button>
+      <button data-tab="eventos">Bitácora</button>
+    </div>
+    <section id="tab-usuarios">
+      <div class="tarjeta"><h2>Usuarios</h2><div id="usuarios" class="desplazable"></div></div>
+      <form id="form-usuario" class="tarjeta" novalidate>
+        <h2>Crear usuario</h2>
+        <div class="fila">
+          <div><label for="u-nombre">Nombre</label><input id="u-nombre" required></div>
+          <div><label for="u-usuario">Usuario</label><input id="u-usuario" required></div>
+        </div>
+        <div class="fila">
+          <div><label for="u-correo">Correo</label><input id="u-correo" type="email" required></div>
+          <div><label for="u-rol">Rol</label><select id="u-rol"><option value="veterinario">Veterinario</option><option value="cliente">Cliente</option><option value="admin">Administrador</option></select></div>
+        </div>
+        <label for="u-password">Contraseña inicial</label><input id="u-password" type="password" required autocomplete="new-password">
+        <p><button class="btn" type="submit">Crear usuario</button></p>
+      </form>
+    </section>
+    <section id="tab-sesiones" class="oculto"><div class="tarjeta"><h2>Sesiones activas</h2><div id="sesiones" class="desplazable"></div></div></section>
+    <section id="tab-eventos" class="oculto"><div class="tarjeta"><h2>Bitácora de seguridad (últimos 100)</h2><div id="eventos" class="desplazable"></div></div></section>
+    <p></p>
+  </main>
+  <footer class="pie"><div class="contenedor"><span>© 2026 Huellas del Bravo · Ciudad Juárez, Chihuahua</span><span>Proyecto universitario · José Iván Barreras Nava · Desarrollo Web Profesional · UTCJ</span></div></footer>
+</body>
+</html>

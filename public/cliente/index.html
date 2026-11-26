@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis mascotas — Huellas del Bravo</title>
+  <link rel="icon" href="/img/logo.svg">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script type="module" src="/js/cliente.js"></script>
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <a class="marca" href="/"><img src="/img/logo.svg" alt="">Huellas del Bravo</a>
+      <nav id="nav"></nav>
+    </div>
+  </header>
+  <main class="contenedor">
+    <section class="encabezado"><h1 id="saludo">Hola</h1><p>Administra a tus mascotas y tus citas.</p></section>
+    <div class="grid g2">
+      <form id="form-mascota" class="tarjeta" novalidate>
+        <h2>Registrar mascota</h2>
+        <div class="fila">
+          <div><label for="m-nombre">Nombre</label><input id="m-nombre" required></div>
+          <div><label for="m-especie">Especie</label>
+            <select id="m-especie"><option>Perro</option><option>Gato</option><option>Ave</option><option>Conejo</option><option>Otro</option></select></div>
+        </div>
+        <div class="fila">
+          <div><label for="m-raza">Raza</label><input id="m-raza"></div>
+          <div><label for="m-edad">Edad (años)</label><input id="m-edad" type="number" min="0" max="40"></div>
+        </div>
+        <p><button class="btn" type="submit">Guardar mascota</button></p>
+      </form>
+      <form id="form-cita" class="tarjeta" novalidate>
+        <h2>Agendar cita</h2>
+        <label for="c-mascota">Mascota</label><select id="c-mascota" required></select>
+        <label for="c-vet">Veterinario</label><select id="c-vet" required></select>
+        <label for="c-fecha">Fecha y hora</label><input id="c-fecha" type="datetime-local" required>
+        <label for="c-motivo">Motivo</label><input id="c-motivo" required placeholder="Vacuna, revisión general…">
+        <p><button class="btn" type="submit">Agendar</button></p>
+      </form>
+    </div>
+    <section class="tarjeta"><h2>Mis mascotas</h2><div id="mascotas" class="desplazable"></div></section>
+    <section class="tarjeta"><h2>Mis citas</h2><div id="citas" class="desplazable"></div></section>
+    <p></p>
+  </main>
+  <footer class="pie"><div class="contenedor"><span>© 2026 Huellas del Bravo · Ciudad Juárez, Chihuahua</span><span>Proyecto universitario · José Iván Barreras Nava · Desarrollo Web Profesional · UTCJ</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi cuenta — Huellas del Bravo</title>
+  <link rel="icon" href="/img/logo.svg">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script type="module" src="/js/cuenta.js"></script>
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <a class="marca" href="/"><img src="/img/logo.svg" alt="">Huellas del Bravo</a>
+      <nav id="nav"></nav>
+    </div>
+  </header>
+  <main class="contenedor">
+    <section class="encabezado"><h1>Mi cuenta</h1><p id="sub">Perfil, seguridad y dispositivos conectados.</p></section>
+    <div class="grid g2">
+      <form id="form-perfil" class="tarjeta" novalidate>
+        <h2>Perfil</h2>
+        <p class="ayuda" id="datos-cuenta"></p>
+        <label for="p-nombre">Nombre</label><input id="p-nombre" required>
+        <label for="p-tel">Teléfono</label><input id="p-tel" type="tel">
+        <p><button class="btn" type="submit">Guardar</button></p>
+      </form>
+      <section class="tarjeta">
+        <h2>Verificación en dos pasos (MFA)</h2>
+        <p id="mfa-estado"></p>
+        <div id="mfa-off">
+          <button class="btn" id="mfa-iniciar" type="button">Activar con app autenticadora</button>
+          <form id="form-mfa-activar" class="oculto" novalidate>
+            <p>1. Escanea el código con Google Authenticator o Microsoft Authenticator.</p>
+            <img id="mfa-qr" class="qr" alt="Código QR para la app autenticadora" width="220" height="220">
+            <p class="ayuda">¿No puedes escanear? Clave manual: <span id="mfa-secreto" class="codigo"></span></p>
+            <label for="mfa-codigo">2. Escribe el código de 6 dígitos</label>
+            <input id="mfa-codigo" inputmode="numeric" maxlength="7" required>
+            <p><button class="btn" type="submit">Confirmar y activar</button></p>
+          </form>
+        </div>
+        <form id="form-mfa-desactivar" class="oculto" novalidate>
+          <label for="d-pass">Contraseña actual</label><input id="d-pass" type="password" required autocomplete="current-password">
+          <label for="d-codigo">Código de la app</label><input id="d-codigo" inputmode="numeric" maxlength="7" required>
+          <p><button class="btn peligro" type="submit">Desactivar MFA</button></p>
+        </form>
+      </section>
+      <form id="form-pass" class="tarjeta" novalidate>
+        <h2>Cambiar contraseña</h2>
+        <label for="pa-actual">Contraseña actual</label><input id="pa-actual" type="password" required autocomplete="current-password">
+        <label for="pa-nueva">Nueva contraseña</label><input id="pa-nueva" type="password" required autocomplete="new-password">
+        <p class="ayuda">Al cambiarla se cerrarán tus demás sesiones.</p>
+        <p><button class="btn" type="submit">Actualizar</button></p>
+      </form>
+      <form id="form-pregunta" class="tarjeta" novalidate>
+        <h2>Pregunta secreta</h2>
+        <p class="ayuda" id="pregunta-actual"></p>
+        <label for="pr-pregunta">Pregunta</label>
+        <select id="pr-pregunta">
+          <option>¿Cuál fue el nombre de tu primera mascota?</option>
+          <option>¿En qué colonia creciste?</option>
+          <option>¿Cuál es el segundo nombre de tu madre?</option>
+          <option>¿Cuál es tu comida favorita?</option>
+        </select>
+        <label for="pr-resp">Respuesta</label><input id="pr-resp" required autocomplete="off">
+        <label for="pr-pass">Contraseña actual</label><input id="pr-pass" type="password" required autocomplete="current-password">
+        <p><button class="btn" type="submit">Guardar pregunta</button></p>
+      </form>
+    </div>
+    <section class="tarjeta">
+      <h2>Mis sesiones y dispositivos</h2>
+      <p class="ayuda" id="politica"></p>
+      <div id="sesiones" class="desplazable"></div>
+      <p><button class="btn sec" id="cerrar-otras" type="button">Cerrar todas las demás sesiones</button></p>
+    </section>
+    <p></p>
+  </main>
+  <footer class="pie"><div class="contenedor"><span>© 2026 Huellas del Bravo · Ciudad Juárez, Chihuahua</span><span>Proyecto universitario · José Iván Barreras Nava · Desarrollo Web Profesional · UTCJ</span></div></footer>
+</body>
+</html>

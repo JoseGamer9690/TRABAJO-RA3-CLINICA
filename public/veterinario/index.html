@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda — Huellas del Bravo</title>
+  <link rel="icon" href="/img/logo.svg">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script type="module" src="/js/veterinario.js"></script>
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <a class="marca" href="/"><img src="/img/logo.svg" alt="">Huellas del Bravo</a>
+      <nav id="nav"></nav>
+    </div>
+  </header>
+  <main class="contenedor">
+    <section class="encabezado"><h1 id="saludo">Agenda</h1><p>Citas asignadas y registro de consultas.</p></section>
+    <div class="grid g4" id="kpis"></div>
+    <section class="tarjeta"><h2>Citas</h2><div id="agenda" class="desplazable"></div></section>
+    <form id="form-atender" class="tarjeta oculto" novalidate>
+      <h2>Registrar consulta</h2>
+      <p id="atender-info" class="aviso info"></p>
+      <label for="notas">Diagnóstico y notas</label>
+      <textarea id="notas" rows="4" required></textarea>
+      <p><button class="btn" type="submit">Marcar como atendida</button> <button class="btn sec" type="button" id="cancelar-atender">Cancelar</button></p>
+    </form>
+    <p></p>
+  </main>
+  <footer class="pie"><div class="contenedor"><span>© 2026 Huellas del Bravo · Ciudad Juárez, Chihuahua</span><span>Proyecto universitario · José Iván Barreras Nava · Desarrollo Web Profesional · UTCJ</span></div></footer>
+</body>
+</html>

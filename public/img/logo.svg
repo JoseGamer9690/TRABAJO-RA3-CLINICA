@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Huellas del Bravo">
+  <defs><clipPath id="c"><circle cx="32" cy="32" r="30"/></clipPath></defs>
+  <circle cx="32" cy="32" r="30" fill="#0f766e"/>
+  <path clip-path="url(#c)" d="M0 46c8-4 14-4 21 0s13 4 21 0 14-4 22 0v18H0z" fill="#5eead4" opacity=".55"/>
+  <ellipse cx="32" cy="35" rx="9" ry="7.5" fill="#fff7ed"/>
+  <ellipse cx="20.5" cy="25" rx="4" ry="5" fill="#fff7ed"/>
+  <ellipse cx="27.5" cy="18.5" rx="4" ry="5" fill="#fff7ed"/>
+  <ellipse cx="36.5" cy="18.5" rx="4" ry="5" fill="#fff7ed"/>
+  <ellipse cx="43.5" cy="25" rx="4" ry="5" fill="#fff7ed"/>
+</svg>

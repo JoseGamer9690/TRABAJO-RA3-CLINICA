@@ -1,0 +1,23 @@
+{
+  "name": "huellas-del-bravo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Clínica Veterinaria Huellas del Bravo — autenticación por roles, multisesión, recuperación de contraseña y protección de rutas",
+  "scripts": {
+    "dev": "node dev-server.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@vercel/functions": "^2.2.0",
+    "bcryptjs": "^2.4.3",
+    "jose": "^5.9.6",
+    "nodemailer": "^6.9.16",
+    "otpauth": "^9.3.6",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "express": "^4.21.2"
+  }
+}
